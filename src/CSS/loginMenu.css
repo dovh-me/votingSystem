@@ -1,0 +1,18 @@
+.txtFld{
+    -fx-color: white;
+    -fx-background-color: rgb(50, 99, 168);
+    -fx-background-radius: 0px;
+}
+.txtFld:hover{
+    -fx-background-color: rgb(50, 64, 168);
+}
+.txtFld:focused{
+    -fx-background-color: rgb(220, 220, 245);
+}
+.btn-confirm{
+    -fx-background-color: #3c3b6e;
+    -fx-background-radius: 0px;
+}
+.btn-confirm:hover{
+    -fx-background-color: rgb(50, 64, 168);
+}

@@ -1,0 +1,21 @@
+.voter{
+    -fx-background-color:  #4f96d1;
+    -fx-background-radius: 0px;
+    -fx-color: white;
+}
+.voter:hover{
+    -fx-background-color:  #486985;
+}
+
+.txtFlds{
+    -fx-background-color: #236499;
+    -fx-background-radius: 0px;
+}
+
+.txtFlds:focused{
+    -fx-background-color: #a1c7e6;
+}
+
+.active{
+    -fx-background-color:  #356288;
+}

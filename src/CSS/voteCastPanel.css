@@ -1,0 +1,28 @@
+Label{
+    -fx-background-color: #2a294d;
+    -fx-pref-width: 300;
+    -fx-alignment: center;
+    -fx-font-size: 24;
+    -fx-font-family: Arial;
+    -fx-padding: 5px;
+    -fx-text-fill: #ffffff;
+}
+Button{
+    -fx-background-radius: 0px;
+    -fx-background-color: #630909;
+    -fx-pref-width: 300;
+    -fx-font-size: 24;
+    -fx-font-family: Arial;
+    -fx-padding: 5px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+Button:hover{
+    -fx-background-color: #d91111;
+}
+GridPane{
+    -fx-background-color: #3c3b6e;
+}
+GridPane:hover{
+    -fx-background-color: #5451b0;
+}

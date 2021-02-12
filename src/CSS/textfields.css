@@ -1,0 +1,10 @@
+.voterIDPrompt{
+    -fx-background-color: #3240a8;
+    -fx-background-radius: 0px;
+}
+.voterIDPrompt:hover{
+    -fx-background-color: #EEEEEE;
+}
+.voterIDPrompt:focused{
+    -fx-background-color: #FFFFFF;
+}

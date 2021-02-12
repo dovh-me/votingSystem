@@ -1,0 +1,21 @@
+.candidate{
+    -fx-background-color: rgb(75, 75, 128);
+    -fx-background-radius: 0px;
+    -fx-color: white;
+}
+.candidate:hover{
+    -fx-background-color: rgb(55, 55, 94);
+}
+
+.txtFlds{
+    -fx-background-color: rgb(84, 84, 158);
+    -fx-background-radius: 0px;
+}
+
+.txtFlds:focused{
+    -fx-background-color: rgb(220, 220, 245);
+}
+
+.active{
+    -fx-background-color: rgb(55, 55, 94);
+}

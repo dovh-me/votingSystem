@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #3c3b6e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.voteCast.VoteCastPanelController">
+   <children>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="24.0" layoutY="109.0" prefHeight="958.0" prefWidth="1857.0" style="-fx-background-color: #3c3b6e;" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="109.0">
+         <content>
+            <GridPane fx:id="GDPaneCandidates" alignment="CENTER" hgap="5.0" maxWidth="1850" prefHeight="950" prefWidth="1850.0" style="-fx-background-color: #3c3b6e;" stylesheets="@../../CSS/voteCastPanel.css" vgap="10.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="93.0" fitWidth="788.0" layoutX="584.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/voting_panel_header.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

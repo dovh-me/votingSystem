@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../CSS/buttons.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.ballots.BallotCreateController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" stroke="WHITE" strokeType="INSIDE" width="1366.0" />
+      <Button layoutX="1206.0" layoutY="24.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" styleClass="active" text="BALLOT" textFill="WHITE" AnchorPane.topAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="31.0" mnemonicParsing="false" onAction="#voters" prefHeight="60.0" prefWidth="160.0" styleClass="headerBtn" text="VOTERS" textFill="WHITE" AnchorPane.topAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="887.0" layoutY="31.0" mnemonicParsing="false" onAction="#addCandidate" prefHeight="60.0" prefWidth="160.0" styleClass="headerBtn" text="CANDIDATES" textFill="WHITE" AnchorPane.topAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="683.0" layoutX="251.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1115.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3b6e" height="670.0" layoutX="259.0" layoutY="92.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1100.0" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="92.0" />
+      <VBox layoutX="-1.0" layoutY="85.0" prefHeight="683.0" prefWidth="252.0" style="-fx-background-color: #3c3b6e;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ballotView" prefHeight="60.0" prefWidth="252.0" styleClass="headerBtn" text="VIEW/START BALLOT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#createBallot" prefHeight="60.0" prefWidth="252.0" styleClass="active" text="CREATE BALLOT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="442.0" prefWidth="252.0" styleClass="headerBtn">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="blltIdTxt" layoutX="321.0" layoutY="214.0" prefHeight="40.0" prefWidth="722.0" promptText="Ballot ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="blltNameTxt" layoutX="321.0" layoutY="315.0" prefHeight="40.0" prefWidth="722.0" promptText="Ballot Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="blltNotesTxt" layoutX="321.0" layoutY="422.0" prefHeight="241.0" prefWidth="722.0" promptText="Notes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="1089.0" layoutY="214.0" mnemonicParsing="false" onAction="#createBallot" prefHeight="40.0" prefWidth="234.0" text="Create Ballot">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeWindow" styleClass="close" text="X" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="73.0" fitWidth="178.0" layoutX="78.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/menuHeader.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

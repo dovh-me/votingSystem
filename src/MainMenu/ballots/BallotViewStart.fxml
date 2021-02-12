@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../CSS/buttons.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.ballots.BallotViewStartController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="99.0" stroke="WHITE" strokeType="INSIDE" width="1366.0" />
+      <ImageView fitHeight="73.0" fitWidth="178.0" layoutX="79.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/menuHeader.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1206.0" layoutY="26.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="160.0" styleClass="active" stylesheets="@../../CSS/ballotMenu.css" text="BALLOT" textFill="WHITE" AnchorPane.topAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="1046.0" layoutY="136.0" mnemonicParsing="false" onAction="#viewEditVoters" prefHeight="60.0" prefWidth="160.0" styleClass="headerBtn" text="VOTERS" textFill="WHITE" AnchorPane.topAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="887.0" layoutY="31.0" mnemonicParsing="false" onAction="#addCandidate" prefHeight="60.0" prefWidth="160.0" styleClass="headerBtn" text="CANDIDATES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="683.0" layoutX="251.0" layoutY="85.0" onMouseClicked="#hideSelectedInfo" stroke="TRANSPARENT" strokeType="INSIDE" width="1115.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3b6e" height="670.0" layoutX="259.0" layoutY="92.0" onMouseClicked="#hideSelectedInfo" stroke="TRANSPARENT" strokeType="INSIDE" width="1100.0" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="92.0" />
+      <VBox layoutY="85.0" prefHeight="683.0" prefWidth="252.0" style="-fx-background-color: #3c3b6e;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="252.0" text="VIEW/START BALLOT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="ballot" />
+                  <String fx:value="active" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#createBallot" prefHeight="60.0" prefWidth="252.0" styleClass="headerBtn" text="CREATE BALLOT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="456.0" prefWidth="252.0" styleClass="headerBtn">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <ScrollPane layoutX="339.0" layoutY="149.0" prefHeight="246.0" prefWidth="692.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="671.0">
+               <children>
+                  <TableView fx:id="ballot_table" onMouseClicked="#enableViewBtn" prefHeight="246.0" prefWidth="679.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="200.0" text="Ballot ID" />
+                      <TableColumn fx:id="col_name" prefWidth="463.2000732421875" text="Ballot Name" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="viewBtn" disable="true" layoutX="1063.0" layoutY="217.0" mnemonicParsing="false" onAction="#getBallotInfo" prefHeight="54.0" prefWidth="234.0" text="View Ballot">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <AnchorPane fx:id="selectedInfo" layoutX="339.0" layoutY="427.0" prefHeight="301.0" prefWidth="959.0" visible="false">
+         <children>
+            <AnchorPane fx:id="GDBallotView" prefHeight="287.0" prefWidth="893.0">
+               <children>
+                  <Rectangle fx:id="ballotRect" arcHeight="5.0" arcWidth="5.0" fill="#5c99d2" height="302.0" layoutX="-2.0" opacity="0.38" stroke="TRANSPARENT" strokeType="INSIDE" width="959.0" />
+                  <TextField fx:id="BallotIDTxt" disable="true" layoutX="31.0" layoutY="178.0" prefHeight="38.0" prefWidth="348.0" promptText="Ballot ID">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="BallotNameTXT" disable="true" layoutX="31.0" layoutY="95.0" prefHeight="38.0" prefWidth="348.0" promptText="Ballot Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="BallotNotesTxt" layoutX="446.0" layoutY="13.0" prefHeight="163.0" prefWidth="485.0" promptText="Add Notes">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="addNoteBtn" layoutX="445.0" layoutY="181.0" mnemonicParsing="false" onAction="#addNote" prefHeight="31.0" prefWidth="486.0" text="Add Note">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="blltnmLbl" layoutX="31.0" layoutY="68.0" text="Ballot Name:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="activity" layoutX="31.0" layoutY="13.0" mnemonicParsing="false" onAction="#ballotStartPrompt" prefHeight="38.0" prefWidth="348.0" text="Start Ballot">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="blltIDLbl" layoutX="31.0" layoutY="151.0" text="Ballot ID:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="rmvBallotBtn" layoutX="31.0" layoutY="242.0" mnemonicParsing="false" onAction="#removeBallot" prefHeight="31.0" prefWidth="348.0" text="Remove Ballot" />
+                  <Button layoutX="721.0" layoutY="241.0" mnemonicParsing="false" onAction="#resetBallot" prefHeight="31.0" prefWidth="210.0" text="Reset Ballot" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeWindow" styleClass="close" text="X" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="1063.0" layoutY="307.0" mnemonicParsing="false" onAction="#resetCandidates" prefHeight="54.0" prefWidth="234.0" text="Reset Candidates">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

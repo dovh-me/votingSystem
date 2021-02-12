@@ -1,0 +1,21 @@
+.ballot{
+    -fx-background-color:  #aacfdd;
+    -fx-background-radius: 0px;
+    -fx-color: white;
+}
+.ballot:hover{
+    -fx-background-color: #52b7de;
+}
+
+.txtFlds{
+    -fx-background-color: rgb(84, 84, 158);
+    -fx-background-radius: 0px;
+}
+
+.txtFlds:focused{
+    -fx-background-color: rgb(220, 220, 245);
+}
+
+.active{
+    -fx-background-color: #ff3821;
+}

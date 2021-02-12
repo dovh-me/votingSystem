@@ -1,0 +1,41 @@
+.active{
+    -fx-background-color: #ff3821;
+    -fx-background-radius-top: 5px;
+    -fx-background-radius-bottom: 0px;
+    -fx-background-radius-left: 0px;
+    -fx-background-radius-right: 0px;
+    -fx-color: white;
+}
+.headerBtn{
+    -fx-background-color: #3c3b6e;
+    -fx-background-radius-top: 5px;
+    -fx-background-radius-bottom: 0px;
+    -fx-background-radius-left: 0px;
+    -fx-background-radius-right: 0px;
+    -fx-color: white;
+}
+.headerBtn:hover{
+    -fx-background-color: #3240a8;
+}
+.close{
+    -fx-background-color: #ac1039;
+    -fx-background-radius: 30px;
+}
+.close:hover{
+    -fx-background-color: #d70000;
+}
+
+/* Vote casting main menu */
+
+.buttons{
+    -fx-background-color:  #324ea8;
+}
+.buttons:hover{
+    -fx-background-color:  #273c82;
+}
+.voteIDPrompt-btn{
+    -fx-background-color:  #b22234;
+}
+.voteIDPrompt-btn:hover{
+    -fx-background-color:  #630612;
+}
